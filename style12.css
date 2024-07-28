@@ -1,0 +1,104 @@
+*
+{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("tree.jpg");
+    background-size: cover;
+    background-position: center;
+.wrap{
+    width:300px;
+    
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-left: 40px;
+    background: transparent; 
+    border: 2px solid rgba(0,0,0,.3);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+.wrap h1{
+    font-size: 28px;
+    text-align: center;
+}
+.wrap .input-box
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 30px;
+}
+.input-box input
+{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border:none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    padding: 20px 45px 20px 20px;
+}
+input::placeholder
+{
+    color: rgb(0, 0, 0);
+    background-color:transparent;
+    
+}
+.wrap .re-for{
+    display:flex;
+    justify-content: space-between;
+    font-size: 11px;
+    margin: -15px 0 15px;
+}
+.re-for label input{
+    color: rgb(0, 0, 0);
+    margin-right: 3px;
+}
+.re-for a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.re-for a:hover
+{
+    text-decoration: underline;
+}
+.wrap .btn
+{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: rgb(245, 244, 244);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0 0 0 .1);
+    cursor: pointer;
+    font-size: 16px;
+    columns: #333;
+    font-weight: 600px;
+}
+.wrap .reg
+{
+    font-size: 11px;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+.reg p a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+}
+.reg p a:hover
+{
+    text-decoration: underline;
+}

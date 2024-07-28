@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Percentage Location Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+          integrity="sha512-xMQzHxGNBRzUfYtP8dTPOWr1aKoOo5gytMDSzZErHQzgAYfBIVHUgQvHlKMhbLhkAIKvM3GbTlkvtYrPHevAuQ=="
+          crossorigin=""/>
+</head>
+<body>
+    <div id="mapid" style="width: 600px; height: 400px;"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha512-AJEjKJhhPKAP9N7RNjx3zHvtRDlkzQPLi froTVzRUsiikzfwMy//zBNEIkBbvzHrA**/+TvZCF+C5awZUg9CqNA=="
+            crossorigin=""></script>
+
+    <script>
+        var map = L.map('mapid').setView([LATITUDE, LONGITUDE], ZOOM_LEVEL); 
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var marker = L.marker([LATITUDE, LONGITUDE], {title: 'Percentage Location'}).addTo(map);  
+        marker.bindPopup(`<b>${PERCENTAGE}%</b>`).openPopup();  
+
+        // Optional: Additional map customizations using Leaflet.js API
